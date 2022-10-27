@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+    --primary: rgb(29, 221, 189);
+    --bgDark: rgb(12, 12, 12);
+    --white: rgb(250, 250, 250);
+    --secondary: rgb(0, 59, 50);
+    --bgLight: rgb(190, 181, 181);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient( 180deg, rgba(0, 255, 209, 0.098) 0%, rgba(123, 247, 255, 0.03) 100%), #0c0c0c;
+}
+
+header {
+    background-color: var(--bgDark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
+}
+
+header nav .left a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+header nav .left a:hover {
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+header nav .logo {
+    margin-right: 3rem;
+}
+
+.logo-img {
+    border-radius: 75%;
+    width: 70px;
+    height: 40px;
+}
+
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.hero {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.hero .left img {
+    width: 400px;
+    height: 600px;
+    margin: 70px;
+}
+
+.hero .right {
+    color: var(--white);
+    margin-top: -7rem;
+}
+
+.hero .right h6 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.hero .right h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero .right h1 span {
+    color: var(--primary);
+}
+
+.hero .right p {
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+section {
+    padding: 6rem;
+}
+
+section.about h1 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+section.about h1 span {
+    color: var(--primary);
+}
+
+section.about h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: aqua;
+}
+
+section.about p {
+    font-family: "Lato", sans-serif;
+    color: var(--white);
+    line-height: 1.9rem;
+    margin-bottom: 2rem;
+}
+
+section.about .socials {
+    display: flex;
+}
+
+section.about .socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+}
+
+section.about .socials a:hover {
+    background: var(--primary);
+}
+
+.services-head {
+    color: rgb(10, 9, 9);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    color: var(--primary);
+}
+
+.services-head+p {
+    color: var(--white);
+    font-family: "Lato", sans-serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    font-weight: 400;
+}
+
+.card img {
+    width: 50px;
+    background: var(--white);
+}
+
+.flex {
+    display: flex;
+}
+
+.items-centre {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-top: -15rem;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+
+/*cards*/
+
+.title {
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    flex-direction: row-reverse;
+    gap: 5.2rem;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s;
+    margin-bottom: 40px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0px;
+    background-color: #5af5ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 1;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+    background: #5af5ff;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 5px);
+    height: calc(100% - 6px);
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+    background: linear-gradient( 180deg, rgba(0, 255, 209, 0.098) 0%, rgba(123, 247, 255, 0.03) 100%), #0c0c0c;
+}
+
+.bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #5af5ff;
+}
+
+.card:hover .bg::after {
+    height: 100%;
+    transition: 1.5s;
+}
+
+.card:hover::before {
+    height: 5px;
+    top: 100%;
+    transition: top 1.5s;
+    animation: hide 0.5s 1.5s forwards 1;
+}
+
+@keyframes hide {
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.card:hover {
+    transform: translateY(-40px);
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    padding: 40px;
+}
+
+.heading {
+    text-align: center;
+    font-family: "dosis";
+    font-size: 60px;
+    text-transform: capitalize;
+    color: none;
+    -webkit-text-stroke: 1px #5af5ff;
+    margin-bottom: 30px;
+}
+
+.info {
+    font-family: "roboto", sans-serif;
+    color: #5af5ff;
+    text-align: center;
+    line-height: 25px;
+}
+
+.card:hover .info {
+    transition: 0.5s;
+    transition-delay: 1.5s;
+    color: #000;
+}
